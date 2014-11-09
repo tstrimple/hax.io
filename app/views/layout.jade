@@ -1,0 +1,44 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    link(rel='stylesheet', type='text/css', media='screen', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', media='screen', href='/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', type='text/css', media='screen', href='/css/site.css')
+  body
+    .navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button(type='button', data-toggle='collapse', data-target='#primary-nav').navbar-toggle.collapsed
+            span.sr-only toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a(href='/').navbar-brand hax.io
+
+
+        #primary-nav.collapse.navbar-collapse.navbar-left
+          ul.nav.navbar-nav
+            li
+              a(href='/standard') standard
+            li
+              a(href='/block') block
+            li
+              a(href='/modern') modern
+            li
+              a(href='/legacy') legacy
+            li
+              a(href='/vintage') vintage
+            li
+              a(href='/commander') commander
+
+        form.navbar-form.navbar-right(role='search')
+          .form-group
+            input(type='text', placeholder='search cards').form-control
+            button(type='button').form-control.btn.btn-default search
+
+    .container-fluid
+      block content
+    script(src='/js/jquery-1.11.1.min.js')
+    script(src='/js/bootstrap.min.js')
+    block scripts
